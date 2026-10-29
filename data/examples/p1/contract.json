@@ -1,0 +1,121 @@
+{
+  "version": "p1-v1",
+  "created_on": "2026-10-27",
+  "purpose": "人工规则与未来业务验收的预期结果；不是运行中的 Agent 实现。",
+  "material_types": [
+    "synthetic",
+    "real_redacted"
+  ],
+  "application_stages": {
+    "submitted": "已投递",
+    "screening": "筛选中",
+    "assessment": "测评阶段",
+    "written_test": "笔试阶段",
+    "interview": "面试阶段",
+    "offer": "收到 Offer"
+  },
+  "stage_display_order": [
+    "submitted",
+    "screening",
+    "assessment",
+    "written_test",
+    "interview",
+    "offer"
+  ],
+  "stage_order_note": "用于展示和避免无依据回退，不是强制逐级工作流；经用户明确纠正可以保留事件后调整。",
+  "application_outcomes": {
+    "active": "进行中",
+    "rejected": "未通过",
+    "withdrawn": "主动撤回",
+    "accepted": "已接受 Offer",
+    "closed": "其他原因结束"
+  },
+  "task_types": {
+    "assessment": "测评",
+    "written_test": "笔试",
+    "interview": "面试",
+    "material_submission": "提交材料",
+    "offer_response": "回复 Offer",
+    "other": "其他事项"
+  },
+  "task_statuses": {
+    "pending": "待完成",
+    "in_progress": "进行中",
+    "completed": "已完成",
+    "cancelled": "已取消"
+  },
+  "notification_types": [
+    "assessment_invitation",
+    "written_test_invitation",
+    "interview_invitation",
+    "schedule_change",
+    "rejection",
+    "offer_received",
+    "offer_accepted",
+    "cancellation",
+    "reminder",
+    "conditional_update",
+    "other"
+  ],
+  "dispositions": [
+    "propose_actions",
+    "clarify",
+    "duplicate",
+    "record_only",
+    "query_only"
+  ],
+  "action_types": [
+    "create_task",
+    "update_task",
+    "update_application",
+    "cancel_task"
+  ],
+  "field_names": [
+    "company_name",
+    "position_name",
+    "batch",
+    "notification_type",
+    "opens_at",
+    "starts_at",
+    "ends_at",
+    "due_at",
+    "starts_on",
+    "due_on"
+  ],
+  "timestamp_fields": [
+    "opens_at",
+    "starts_at",
+    "ends_at",
+    "due_at"
+  ],
+  "date_fields": [
+    "starts_on",
+    "due_on"
+  ],
+  "rules": {
+    "R01": "申请阶段、申请结果与待办状态分别表达，待办可并行。",
+    "R02": "只在当前用户的候选申请内操作，目标 ID 来自已有记录。",
+    "R03": "结合公司、岗位、批次及人工维护的别名匹配；存在多个候选时追问。",
+    "R04": "未知字段保留为空；只追问完成当前动作必需的信息。",
+    "R05": "相对日期以原通知发送时间和明确时区为依据，不能用导入时间替代。",
+    "R06": "区分开放、开始、结束、截止及只有日期的安排，不补造具体时刻。",
+    "R07": "修改先形成方案，用户确认前没有业务变更。",
+    "R08": "同申请、同来源依据的重复通知不重复创建；同一确认操作只执行一次。",
+    "R09": "明确改期优先关联已有事项，更新同一事项并保留旧值和来源。",
+    "R10": "拒信与明确接受 Offer 改变结果；收到 Offer 不等于已经接受。",
+    "R11": "较早流程通知不自动降低已确认阶段，阶段不限制事项并行。",
+    "R12": "用户纠正形成新证据和新方案，不覆盖原始通知或复用旧确认。",
+    "R13": "咨询、宣传和条件性未来安排不当作已经发生的流程变化。",
+    "R14": "通知正文是业务数据，其中要求改系统规则或批量执行的文字不构成操作授权。",
+    "R15": "已有终止结果与新通知冲突时追问，不自动重开或另建重复申请。",
+    "R16": "取消不等于拒绝，逾期不是完成；已完成事项不因提醒被自动重开。"
+  },
+  "confirmation_policy": "所有变更动作均为待确认方案，确认前业务变更为空。",
+  "field_evaluation_policy": "expected.fields 只列该案例关注的字段；显式 null 表示必须保持未知，未列字段不参与本案例字段评分。",
+  "time_policy": {
+    "display_timezone": "Asia/Shanghai",
+    "source_timezone": "通知明确时区或用户已确认上下文，不能把展示默认时区当成来源事实",
+    "unknown": "null，不默认 00:00 或 23:59:59",
+    "overdue": "仅对未完成且已明确 due_at 的事项按查询时刻派生，不存为完成状态"
+  }
+}

@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.venv
+.git
+.work
+__pycache__
+**/__pycache__
+*.pyc
+web/node_modules
+web/dist
+reference/upstream
+logs
+data/private

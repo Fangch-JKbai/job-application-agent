@@ -1,0 +1,107 @@
+{
+  "version": "p11.5-v1",
+  "frozen_date": "2026-10-29",
+  "image": "job-agent-p11-local:20261028",
+  "postgres_image": "pgvector/pgvector:pg16",
+  "resources": {
+    "postgres": {
+      "cpus": 2,
+      "memory_mb": 1024
+    },
+    "api": {
+      "cpus": 1,
+      "memory_mb": 512
+    },
+    "worker1": {
+      "cpus": 0.5,
+      "memory_mb": 512
+    },
+    "worker2": {
+      "cpus": 0.5,
+      "memory_mb": 512
+    }
+  },
+  "pools": {
+    "api": 5,
+    "worker_each": 8,
+    "driver": 2,
+    "connection_budget": 25,
+    "fault_probe_reserve": 2
+  },
+  "dataset": {
+    "applications": 5000,
+    "tasks": 10000,
+    "events": 30000,
+    "notifications": 50000,
+    "historical_jobs": 50000,
+    "completed_extractions": 10000
+  },
+  "read": {
+    "rates_rps": [
+      10,
+      30,
+      100
+    ],
+    "duration_seconds": 30,
+    "warmup_seconds": 5,
+    "repeats": 3,
+    "max_inflight": 100,
+    "request_timeout_seconds": 10,
+    "endpoint_mix": [
+      "application_list",
+      "task_list",
+      "inbox",
+      "application_detail",
+      "event_history",
+      "upcoming_tasks",
+      "job_list"
+    ]
+  },
+  "mixed": {
+    "read_rps": 30,
+    "submit_rps": 1,
+    "duration_seconds": 60,
+    "model_delays_seconds": [
+      0.25,
+      1.5
+    ]
+  },
+  "burst": {
+    "submissions": 240,
+    "concurrency": 30,
+    "queue_limit": 200,
+    "owner_limit": 100,
+    "model_delay_seconds": 0.25
+  },
+  "fault": {
+    "jobs": 12,
+    "lease_seconds": 3,
+    "execution_timeout_seconds": 1,
+    "retry_after_seconds": 1,
+    "maximum_attempts": 3
+  },
+  "isolation_comparison": {
+    "applications": 100,
+    "tasks": 0,
+    "model_delay_seconds": 1.5,
+    "overlapping_models": 5,
+    "read_concurrency": 10,
+    "read_requests": 60,
+    "repeats": 3
+  },
+  "development_acceptance": {
+    "read_p95_ms": 200,
+    "submit_p95_ms": 200,
+    "unexpected_http_error_fraction": 0.01,
+    "client_drops_at_target_rates": 0,
+    "target_read_rates_rps": [
+      10,
+      30
+    ],
+    "exploration_only_rps": 100,
+    "burst_reject_status": 429,
+    "all_accepted_jobs_reconciled": true
+  },
+  "statistics": "nearest-rank p50/p95/p99 over observed response latencies including errors; offered-to-response and send-to-response separate; client-dropped arrivals count as dropped, never as zero-ms successes; each endpoint and repeat separate; no claim of true model capacity",
+  "boundaries": "local disposable containers; no real model or mailbox; no changes to running developer services; no server deployment; API/worker PostgreSQL limits fixed, host load generator and Docker VM also recorded"
+}

@@ -1,0 +1,5 @@
+{
+  "readme_docker_initialization_passed": true,
+  "runtime_file_permissions": "0600",
+  "secrets_generated_without_printing": true
+}

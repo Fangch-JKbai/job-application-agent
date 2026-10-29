@@ -1,0 +1,507 @@
+{
+  "run_id": "candidate-development",
+  "split": "development",
+  "started_at": "2026-10-28T12:21:48.236354+08:00",
+  "finished_at": "2026-10-28T12:22:43.810522+08:00",
+  "state": "completed",
+  "material_type": "synthetic",
+  "real_model_called": true,
+  "requested_provider": "deepseek",
+  "requested_model": "deepseek-flash",
+  "dataset_lock": {
+    "version": "p9-v1",
+    "frozen_on": "2026-10-28",
+    "author": "same AI assistant as implementation; not external independent annotation",
+    "heldout_meaning": "specific texts and expected outcomes frozen before development live runs; no holdout-driven tuning after final run",
+    "real_redacted_cases": 0,
+    "files": {
+      "development.json": "a6f77fffffd87a7026bc35c9ffebbdf727ec1253294fc46c509e5a8821e3d53b",
+      "holdout.json": "942885a17e1f99b6dbb3f18de3f6d0eb512884bcdcf4f336fd55fbb43a80aa99",
+      "pricing.json": "a545dae10f1f2fc588351c93ac96bf07bac9617f62621b9b09e41ea7b48a1ce8"
+    }
+  },
+  "source_hashes": {
+    "agent/__init__.py": "6a930f15f404a4cdc5036d19389e8367ba45950898f3171bb30c486b57e0f2cb",
+    "agent/notification_extractor.py": "807cfd1163f1fdf8399a3da20a8f1488c9c97d12b887e47904765800be6382ec",
+    "agent/session_agent.py": "1059955a509c63c62df95274ae1da052071db58ec2a6c89f266c711d562f1bbe",
+    "agent/session_tools.py": "8b4a84687620df72632a99c8734a1f05c9c7a113c2103c7e70a8d1835c5cafd8",
+    "api/__init__.py": "d18f915f78b82572300bd6befe19565420a73b8d6a5922fb7b4ba77ecc6889a0",
+    "api/confirmations.py": "3bf25da2922a17de1db7c2030fc84a9cee2ba642b99afee8addb099fa72a8905",
+    "api/main.py": "3a0c68adfdd401c8f31799786c72ee5ccbc61513cbc08327b99812eb6ad93ebe",
+    "api/notifications.py": "00e2fcf6fe6cd0d9a3cdc83ce0e8c535e313561458a9ba3da81d7d7ec4c8519a",
+    "api/processing.py": "c09155c45612a16351bff99aeda3ac92ecfe331b331bc308c25bb80e81ed1b29",
+    "api/routes.py": "20c89e804fd9388448998756821c710a52bb66c8de554c3ef13c4862bc7955c7",
+    "api/sessions.py": "bfba3159c6567986a38f18a32cfa6b03347a2d3b77d799c0ba00ae2711f930f6",
+    "api/workbench.py": "cb090a7d520f1dda66f0f9811587b30abcfd906f591119bf11e963cca866d215",
+    "core/__init__.py": "aa5ff4a67912e1bc260a459a2c9f7efc039d4bfb7f57542e57379f0741c234d3",
+    "core/identity.py": "4f01803af291105c4b1ab2efe84ffe701b58d5654dd2039899de0aabde970a3e",
+    "core/logging.py": "1013f0e8ce1de5a4838013e1968416033ed055ae9b2dd0cbc62400183f15a00e",
+    "database/migrations/0001_core.sql": "58f489909ae2914fa28cea331771bd7525578add4766412e5ea0561d57ad7678",
+    "database/migrations/0002_request_fingerprint.sql": "9b6ebfe0ec6efdc58d033a13b899a28acfaf44a2f65d56ac32c7d7e387ba47a6",
+    "database/migrations/0003_notifications.sql": "066264500ef90be527c4437a552eaf739e5841ccb6836f89eb3c92d02d06caa8",
+    "database/migrations/0004_agent_sessions.sql": "386b62e8f96465f59cded985a8b21e4d2593c8d1ade99ffda4082d35718ce5cb",
+    "database/migrations/0005_proposal_execution.sql": "fd039ac01e98a4bf03033f420962a4cb1e1b64f606e0dfbd4ac153176a69d4b8",
+    "database/migrations/0006_processing_recovery.sql": "efc8542946949cdb35098796808b99dc476aa3a9601899fb58add84239848eae",
+    "evaluation/__init__.py": "85d294a38f0d8fbe2d8d9561ac180bafdff5fcf11a10ed1ba901521ab2fca1cd",
+    "evaluation/grading.py": "8ca27fb731e7aad0f99a1d565403b84565b4459441898c2fb5aa412e3377468e",
+    "evaluation/reporting.py": "f24a70f87d800414e49e5cec31003473c999f67458e7b403e116373819a769f9",
+    "evaluation/runner.py": "3501b0c64369db74fc6148b2661fe66cbd2af36ad7af844104fe27540bdef473",
+    "pyproject.toml": "fcde21ec9dcac05188bffc36dcd755bc09ce286decdb623faa57a9c034d48f20",
+    "schemas/__init__.py": "8d661bc8f32d5b64934e60b9fc2b9c70489c8d39f240bd5f0e53f6e49d61b8fb",
+    "schemas/confirmations.py": "8f9c4a084d7b4cf52b17bf44fa02872cf8743f2419ac4bfcbac0c448cd62cf53",
+    "schemas/notifications.py": "571901ff5c156d75c76edb50e389b94117656ecc7d596191f29727d2d46e6b11",
+    "schemas/processing.py": "a33dd3092aae7d5877a676fc43bbced7be7cc19f9d9fcffdc6d0d29020d1fcab",
+    "schemas/recruitment.py": "f88685029325909e4074bed99abe75eab5536b99c1f8c32ade1a8b854c0b245b",
+    "schemas/sessions.py": "983bd889f1898c1e8d10eda9d417fe2c1fb7f8589d69c2e709e060d83957c242",
+    "schemas/workbench.py": "3fbf583c10a600857f2558ccc92ec197e456a80d60f44cde336cef506ce35446",
+    "scripts/evaluate_p9.py": "8216d254636ad453b727a6f2a0ddbbf82a72fac35486bcae1e1f4a5107f467f7",
+    "services/__init__.py": "dbc5ce2cf2b99d990dbd73175d749e47deb7aca944776550a8e2ee939108baf7",
+    "services/confirmations.py": "1c65534eaa80b9ab3d378c03098fca82e2b6530fcefc5ac7f23f6299e6988443",
+    "services/errors.py": "b01bab59b6284641d7bba9174e8456863d0cdd7d4dbe93d12103c3b167f7923f",
+    "services/notification_validation.py": "aec9a451513eca5655869f984dd1d2c4f4f44120e2a1ab50bfb52efcddc40741",
+    "services/notifications.py": "697ebb74c4ea7ed0e4714cb71a77aa817139eab2110fde57ffce91a0ee1477ef",
+    "services/processing.py": "581795d5927845683157e1a1e8d7c5e7e8f0473c76d1adf3dc122b80042d501a",
+    "services/processing_state.py": "a7d06ea9174323646bb6c8f53321f7d7465b71228619dfc2cd19f052d8449c98",
+    "services/proposal_state.py": "62407e1a7f3039627a61c8ed8d37d691bae09765b7ed393a0624e4f791394338",
+    "services/recruitment.py": "c1f56356d060b4cea9df228fd67ad103de021bc8989fca3b7da447353f515db2",
+    "services/sessions.py": "4b742e31253f869bb691f5c01c18382400a932684f12367e1afa0c0a24ec72d6",
+    "uv.lock": "ec7474c7ea8d470328fa33536e92e980aa309ad092952076819140cc2ce7ca74"
+  },
+  "package_versions": {
+    "openai": "2.21.0",
+    "asyncpg": "0.31.0",
+    "fastapi": "0.131.0",
+    "pydantic": "2.14.1"
+  },
+  "summary": {
+    "case_count": 8,
+    "passed": 8,
+    "metrics": {
+      "application_match": {
+        "passed": 7,
+        "evaluated": 7,
+        "rate": 1.0
+      },
+      "confirmed_and_replayed_once": {
+        "passed": 7,
+        "evaluated": 7,
+        "rate": 1.0
+      },
+      "database_final_state": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "extraction_fields": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "final_session": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "first_turn_and_questions": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "manual_review_preserves_original": {
+        "passed": 1,
+        "evaluated": 1,
+        "rate": 1.0
+      },
+      "no_preconfirmation_business_writes": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "protocol_completed": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "request_replay_no_extra_work": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      },
+      "unrelated_records_preserved": {
+        "passed": 8,
+        "evaluated": 8,
+        "rate": 1.0
+      }
+    },
+    "latency_ms": {
+      "definition": "whole scripted workflow, including setup readback and synthetic user steps",
+      "p50_nearest_rank": 5751,
+      "p95_nearest_rank": 12513
+    },
+    "failed_cases": []
+  },
+  "cost": {
+    "tool_calls": 47,
+    "tool_errors": 3,
+    "model_calls": 46,
+    "calls_with_usage": 46,
+    "calls_priced": 46,
+    "tokens": {
+      "prompt_tokens": 194371,
+      "completion_tokens": 5349,
+      "total_tokens": 199720
+    },
+    "observed_cost_usd_range": [
+      "0.006549498",
+      "0.013098996"
+    ],
+    "complete": true,
+    "not_account_bill": true
+  },
+  "temporary_database_removed": true,
+  "cases": [
+    {
+      "case_id": "D01",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 5751,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 5,
+        "calls_with_usage": 5,
+        "calls_priced": 5,
+        "tokens": {
+          "prompt_tokens": 20201,
+          "completion_tokens": 560,
+          "total_tokens": 20761
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.001145862",
+          "0.002291724"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D01/result.json"
+    },
+    {
+      "case_id": "D02",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 12513,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 10,
+        "calls_with_usage": 10,
+        "calls_priced": 10,
+        "tokens": {
+          "prompt_tokens": 47219,
+          "completion_tokens": 1400,
+          "total_tokens": 48619
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.001468962",
+          "0.002937924"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D02/result.json"
+    },
+    {
+      "case_id": "D03",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 4515,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 4,
+        "calls_with_usage": 4,
+        "calls_priced": 4,
+        "tokens": {
+          "prompt_tokens": 15390,
+          "completion_tokens": 462,
+          "total_tokens": 15852
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000534756",
+          "0.001069512"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D03/result.json"
+    },
+    {
+      "case_id": "D04",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 7099,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 6,
+        "calls_with_usage": 6,
+        "calls_priced": 6,
+        "tokens": {
+          "prompt_tokens": 25975,
+          "completion_tokens": 776,
+          "total_tokens": 26751
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000843258",
+          "0.001686516"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D04/result.json"
+    },
+    {
+      "case_id": "D05",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 5278,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 5,
+        "calls_with_usage": 5,
+        "calls_priced": 5,
+        "tokens": {
+          "prompt_tokens": 19570,
+          "completion_tokens": 404,
+          "total_tokens": 19974
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000524844",
+          "0.001049688"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D05/result.json"
+    },
+    {
+      "case_id": "D06",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 5584,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 5,
+        "calls_with_usage": 5,
+        "calls_priced": 5,
+        "tokens": {
+          "prompt_tokens": 20333,
+          "completion_tokens": 570,
+          "total_tokens": 20903
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000644814",
+          "0.001289628"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D06/result.json"
+    },
+    {
+      "case_id": "D07",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 5811,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 5,
+        "calls_with_usage": 5,
+        "calls_priced": 5,
+        "tokens": {
+          "prompt_tokens": 20084,
+          "completion_tokens": 567,
+          "total_tokens": 20651
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000662112",
+          "0.001324224"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D07/result.json"
+    },
+    {
+      "case_id": "D08",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "manual_review_preserves_original": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 6983,
+      "scripted_human_review": true,
+      "cost": {
+        "calls": 6,
+        "calls_with_usage": 6,
+        "calls_priced": 6,
+        "tokens": {
+          "prompt_tokens": 25599,
+          "completion_tokens": 610,
+          "total_tokens": 26209
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000724890",
+          "0.001449780"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/candidate-development/D08/result.json"
+    }
+  ]
+}

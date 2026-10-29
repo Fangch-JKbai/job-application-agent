@@ -1,0 +1,22 @@
+name: job-application-agent
+services:
+  postgres:
+    image: ${POSTGRES_IMAGE:-postgres:16}
+    container_name: job-application-agent-db
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-15432}:5432"
+    environment:
+      POSTGRES_DB: job_application_agent_dev
+      POSTGRES_USER: job_agent
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/setup_dev_db.py first}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U job_agent -d job_application_agent_dev"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+    restart: "no"
+volumes:
+  pgdata:
+    name: job-application-agent-pgdata

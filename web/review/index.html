@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>核对通知变更 · 招聘通知 Agent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/review/assets/review.css">
+  <script src="/review/assets/review.js" defer></script>
+</head>
+<body>
+<header class="topbar"><div class="frame bar-inner"><a class="brand" href="/"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h13v16H4zM8 9h5M8 13h3M14 15l2 2 5-6"/></svg>招聘通知 Agent</a><span>本地个人空间</span></div></header>
+<main class="frame">
+  <a id="back-notice" class="back" href="/">← 返回通知处理</a>
+  <div class="title-row"><div><h1>核对通知变更</h1><p id="lead">正在读取这份方案…</p></div><button id="refresh" type="button">重新核对</button></div>
+  <div class="steps" aria-label="处理流程"><span>通知已提取</span><span id="step-review" aria-current="step">核对拟更新内容</span><span id="step-save">确认保存</span></div>
+  <p id="load-error" role="alert" hidden></p>
+  <div id="content" aria-busy="true">
+    <div class="main-column">
+    <section class="panel"><h2>目标申请</h2><div id="target" class="target"><span class="loading-line">正在读取申请信息</span></div><div id="application-changes"></div></section>
+    <section class="panel"><h2>事项变更</h2><div id="tasks"><p>正在读取事项…</p></div></section>
+    </div><div class="source-column">
+    <section class="panel"><h2>原通知与依据</h2><p id="source-meta" class="meta"></p><pre id="original">正在读取通知…</pre><details><summary>查看用户补充与字段依据</summary><div id="evidence"></div></details></section>
+  <section class="decision" aria-label="确认保存">
+    <div id="notices" role="status" aria-live="polite"></div>
+    <form id="confirm-form"><label class="ack"><input id="acknowledge" type="checkbox" disabled>我已核对目标申请、事项时间和以上变更。</label><div class="action-row"><p id="save-note">确认后，将保存这份方案列出的变更。</p><button id="confirm" class="primary" type="submit" disabled>确认并保存</button></div></form>
+    <div id="saved-result" hidden><h2>已保存</h2><p id="saved-note"></p><div id="result-links"></div></div>
+  </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

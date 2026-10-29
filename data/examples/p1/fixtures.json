@@ -1,0 +1,109 @@
+{
+  "material_type": "synthetic",
+  "description": "全部公司、申请和通知由 AI 为本项目人工构造，不是用户求职经历。每个案例独立加载自己的上下文子集，案例之间不共享变更。",
+  "id_note": "这些是可读的样例标识，不规定 P2 数据库主键格式。",
+  "applications": [
+    {
+      "id": "app-xinghe-agent-fall",
+      "company_name": "示例星河科技",
+      "company_aliases": [
+        "示例星河"
+      ],
+      "position_name": "Agent开发工程师",
+      "batch": "2027秋招",
+      "stage": "submitted",
+      "outcome": "active"
+    },
+    {
+      "id": "app-xinghe-frontend-fall",
+      "company_name": "示例星河科技",
+      "company_aliases": [
+        "示例星河"
+      ],
+      "position_name": "前端开发工程师",
+      "batch": "2027秋招",
+      "stage": "submitted",
+      "outcome": "active"
+    },
+    {
+      "id": "app-xinghe-agent-intern",
+      "company_name": "示例星河科技",
+      "company_aliases": [
+        "示例星河"
+      ],
+      "position_name": "Agent开发工程师",
+      "batch": "2027暑期实习",
+      "stage": "written_test",
+      "outcome": "rejected"
+    },
+    {
+      "id": "app-yunfan-ai-fall",
+      "company_name": "示例云帆科技",
+      "company_aliases": [],
+      "position_name": "AI应用工程师",
+      "batch": "2027秋招",
+      "stage": "interview",
+      "outcome": "active"
+    },
+    {
+      "id": "app-qinghe-fullstack-fall",
+      "company_name": "示例青禾软件",
+      "company_aliases": [],
+      "position_name": "AI全栈开发工程师",
+      "batch": "2027秋招",
+      "stage": "assessment",
+      "outcome": "active"
+    },
+    {
+      "id": "app-mingchuan-ai-fall",
+      "company_name": "示例明川科技",
+      "company_aliases": [],
+      "position_name": "AI应用工程师",
+      "batch": "2027秋招",
+      "stage": "offer",
+      "outcome": "active"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-qinghe-assessment",
+      "application_id": "app-qinghe-fullstack-fall",
+      "type": "assessment",
+      "status": "pending",
+      "due_at": "2026-10-30T18:00:00+08:00"
+    },
+    {
+      "id": "task-yunfan-interview-1",
+      "application_id": "app-yunfan-ai-fall",
+      "type": "interview",
+      "status": "pending",
+      "starts_at": "2026-10-29T14:00:00+08:00",
+      "ends_at": "2026-10-29T14:30:00+08:00",
+      "round": 1
+    },
+    {
+      "id": "task-xinghe-written",
+      "application_id": "app-xinghe-agent-fall",
+      "type": "written_test",
+      "status": "pending",
+      "starts_at": "2026-10-28T09:00:00+08:00",
+      "ends_at": "2026-10-28T11:00:00+08:00"
+    },
+    {
+      "id": "task-qinghe-completed",
+      "application_id": "app-qinghe-fullstack-fall",
+      "type": "assessment",
+      "status": "completed",
+      "due_at": "2026-10-30T18:00:00+08:00"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notice-qinghe-assessment",
+      "application_id": "app-qinghe-fullstack-fall",
+      "text": "示例青禾软件2027秋招AI全栈开发工程师：请于2026年10月30日18:00前完成线上测评。",
+      "sent_at": "2026-10-27T09:00:00+08:00",
+      "fingerprint": "16ff41f831cde676a98f039b5871ba6a2654926d659bce5ff5b5c9111c042bac"
+    }
+  ]
+}

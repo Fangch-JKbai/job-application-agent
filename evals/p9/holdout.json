@@ -1,0 +1,799 @@
+{
+  "version": "p9-v1",
+  "material_type": "synthetic",
+  "cases": [
+    {
+      "id": "H01",
+      "title": "东京时区：笔试起止分开",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例枫港智能",
+          "position_name": "算法应用工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例枫港智能2027秋招算法应用工程师：线上笔试为2026年11月4日09:30至11:00，以上均为东京时间Asia/Tokyo。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Tokyo"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例枫港智能",
+          "position_name": "算法应用工程师",
+          "batch": "2027秋招",
+          "notification_type": "written_test_invitation",
+          "tasks": [
+            {
+              "type": "written_test",
+              "round": null,
+              "source_timezone": "Asia/Tokyo",
+              "opens_at": null,
+              "starts_at": "2026-11-04T09:30:00+09:00",
+              "ends_at": "2026-11-04T11:00:00+09:00",
+              "due_at": null,
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "ready",
+        "question_fields": [],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {
+          "a": {
+            "stage": "written_test"
+          }
+        },
+        "tasks": [
+          {
+            "key": "new:0",
+            "application": "a",
+            "type": "written_test",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": null,
+            "source_timezone": "Asia/Tokyo",
+            "opens_at": null,
+            "starts_at": "2026-11-04T09:30:00+09:00",
+            "ends_at": "2026-11-04T11:00:00+09:00",
+            "due_at": null,
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H02",
+      "title": "材料截止只有日期",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例柳汀软件",
+          "position_name": "AI应用工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例柳汀软件2027秋招AI应用工程师：请在2026年11月6日前提交成绩单，仅规定截止日期，不规定具体时刻。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例柳汀软件",
+          "position_name": "AI应用工程师",
+          "batch": "2027秋招",
+          "notification_type": "other",
+          "tasks": [
+            {
+              "type": "material_submission",
+              "round": null,
+              "source_timezone": {
+                "one_of": [
+                  null,
+                  "Asia/Shanghai"
+                ]
+              },
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": null,
+              "starts_on": null,
+              "due_on": "2026-11-06"
+            }
+          ]
+        },
+        "first_status": "ready",
+        "question_fields": [],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {},
+        "tasks": [
+          {
+            "key": "new:0",
+            "application": "a",
+            "type": "material_submission",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": null,
+            "source_timezone": {
+              "one_of": [
+                null,
+                "Asia/Shanghai"
+              ]
+            },
+            "opens_at": null,
+            "starts_at": null,
+            "ends_at": null,
+            "due_at": null,
+            "starts_on": null,
+            "due_on": "2026-11-06"
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H03",
+      "title": "同岗位跨批次：先询问批次",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例岚舟科技",
+          "position_name": "Agent开发工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        },
+        {
+          "key": "b",
+          "company_name": "示例岚舟科技",
+          "position_name": "Agent开发工程师",
+          "batch": "2027暑期实习",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例岚舟科技Agent开发工程师：请于2026年11月5日17:00前完成测评。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [
+        {
+          "text": "2027秋招",
+          "answer_fields": [
+            "batch",
+            "selection",
+            "application_selection"
+          ]
+        }
+      ],
+      "expected": {
+        "extraction": {
+          "company_name": "示例岚舟科技",
+          "position_name": "Agent开发工程师",
+          "batch": null,
+          "notification_type": "assessment_invitation",
+          "tasks": [
+            {
+              "type": "assessment",
+              "round": null,
+              "source_timezone": "Asia/Shanghai",
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": "2026-11-05T17:00:00+08:00",
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "awaiting_user",
+        "question_fields": [
+          "batch",
+          "selection",
+          "application_selection"
+        ],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {
+          "a": {
+            "stage": "assessment"
+          }
+        },
+        "tasks": [
+          {
+            "key": "new:0",
+            "application": "a",
+            "type": "assessment",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": null,
+            "source_timezone": "Asia/Shanghai",
+            "opens_at": null,
+            "starts_at": null,
+            "ends_at": null,
+            "due_at": "2026-11-05T17:00:00+08:00",
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H04",
+      "title": "零候选：得到明确决定才补建",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例不相关软件",
+          "position_name": "Agent开发工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例朔原信息2027秋招Agent全栈工程师：请于2026年11月6日16:30前完成线上测评。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [
+        {
+          "text": "请新建这条申请",
+          "answer_fields": [
+            "selection",
+            "application_selection",
+            "create_application",
+            "new_application"
+          ]
+        }
+      ],
+      "expected": {
+        "extraction": {
+          "company_name": "示例朔原信息",
+          "position_name": "Agent全栈工程师",
+          "batch": "2027秋招",
+          "notification_type": "assessment_invitation",
+          "tasks": [
+            {
+              "type": "assessment",
+              "round": null,
+              "source_timezone": "Asia/Shanghai",
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": "2026-11-06T16:30:00+08:00",
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "awaiting_user",
+        "question_fields": [
+          "selection",
+          "application_selection",
+          "create_application",
+          "new_application"
+        ],
+        "final_status": "ready",
+        "target": "new:0",
+        "application_patches": {},
+        "tasks": [
+          {
+            "key": "new:0",
+            "application": "new:0",
+            "type": "assessment",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": null,
+            "source_timezone": "Asia/Shanghai",
+            "opens_at": null,
+            "starts_at": null,
+            "ends_at": null,
+            "due_at": "2026-11-06T16:30:00+08:00",
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "new_application": {
+        "key": "new:0",
+        "company_name": "示例朔原信息",
+        "position_name": "Agent全栈工程师",
+        "batch": "2027秋招",
+        "stage": "assessment",
+        "outcome": "active",
+        "company_aliases": []
+      },
+      "split": "holdout"
+    },
+    {
+      "id": "H05",
+      "title": "拒信：保留已记录阶段与其他待办",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例叠川科技",
+          "position_name": "AI应用工程师",
+          "batch": "2027秋招",
+          "stage": "interview",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [
+        {
+          "key": "future-interview",
+          "application": "a",
+          "type": "interview",
+          "title": "已有招聘事项",
+          "status": "pending",
+          "round": 2,
+          "source_timezone": "Asia/Shanghai",
+          "opens_at": null,
+          "starts_at": "2026-11-05T10:00:00+08:00",
+          "ends_at": "2026-11-05T10:30:00+08:00",
+          "due_at": null,
+          "starts_on": null,
+          "due_on": null
+        }
+      ],
+      "notification": {
+        "text": "示例叠川科技2027秋招AI应用工程师：很遗憾，本次招聘流程未通过，感谢参与。本邮件没有取消其他日程的指令。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例叠川科技",
+          "position_name": "AI应用工程师",
+          "batch": "2027秋招",
+          "notification_type": "rejection",
+          "tasks": []
+        },
+        "first_status": "ready",
+        "question_fields": [],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {
+          "a": {
+            "outcome": "rejected"
+          }
+        },
+        "tasks": [
+          {
+            "key": "future-interview",
+            "application": "a",
+            "type": "interview",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": 2,
+            "source_timezone": "Asia/Shanghai",
+            "opens_at": null,
+            "starts_at": "2026-11-05T10:00:00+08:00",
+            "ends_at": "2026-11-05T10:30:00+08:00",
+            "due_at": null,
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H06",
+      "title": "取消一面：不结束整条申请",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例白榆科技",
+          "position_name": "Agent开发工程师",
+          "batch": "2027秋招",
+          "stage": "interview",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [
+        {
+          "key": "original-interview",
+          "application": "a",
+          "type": "interview",
+          "title": "已有招聘事项",
+          "status": "pending",
+          "round": 1,
+          "source_timezone": "Asia/Shanghai",
+          "opens_at": null,
+          "starts_at": "2026-11-04T14:00:00+08:00",
+          "ends_at": "2026-11-04T14:30:00+08:00",
+          "due_at": null,
+          "starts_on": null,
+          "due_on": null
+        }
+      ],
+      "notification": {
+        "text": "示例白榆科技2027秋招Agent开发工程师：原定2026年11月4日14:00的一面取消，新的时间尚未安排。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例白榆科技",
+          "position_name": "Agent开发工程师",
+          "batch": "2027秋招",
+          "notification_type": "cancellation",
+          "tasks": [
+            {
+              "type": "interview",
+              "round": 1,
+              "source_timezone": "Asia/Shanghai",
+              "opens_at": null,
+              "starts_at": {
+                "one_of": [
+                  null,
+                  "2026-11-04T14:00:00+08:00"
+                ]
+              },
+              "ends_at": null,
+              "due_at": null,
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "ready",
+        "question_fields": [],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {},
+        "tasks": [
+          {
+            "key": "original-interview",
+            "application": "a",
+            "type": "interview",
+            "title": "已有招聘事项",
+            "status": "cancelled",
+            "round": 1,
+            "source_timezone": "Asia/Shanghai",
+            "opens_at": null,
+            "starts_at": "2026-11-04T14:00:00+08:00",
+            "ends_at": "2026-11-04T14:30:00+08:00",
+            "due_at": null,
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H07",
+      "title": "旧通知相对日期：按原发送周换算",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例泊岸系统",
+          "position_name": "AI后端工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例泊岸系统2027秋招AI后端工程师：请在本周五17:00之前完成测评。",
+        "source": "manual",
+        "sent_at": "2026-10-12T08:30:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例泊岸系统",
+          "position_name": "AI后端工程师",
+          "batch": "2027秋招",
+          "notification_type": "assessment_invitation",
+          "tasks": [
+            {
+              "type": "assessment",
+              "round": null,
+              "source_timezone": "Asia/Shanghai",
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": "2026-10-16T17:00:00+08:00",
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "ready",
+        "question_fields": [],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {
+          "a": {
+            "stage": "assessment"
+          }
+        },
+        "tasks": [
+          {
+            "key": "new:0",
+            "application": "a",
+            "type": "assessment",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": null,
+            "source_timezone": "Asia/Shanghai",
+            "opens_at": null,
+            "starts_at": null,
+            "ends_at": null,
+            "due_at": "2026-10-16T17:00:00+08:00",
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H08",
+      "title": "再次导入相同通知：不新增第二个事项",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例苏岭智能",
+          "position_name": "Agent开发工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例苏岭智能2027秋招Agent开发工程师：请于2026年11月7日18:00前完成线上测评。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例苏岭智能",
+          "position_name": "Agent开发工程师",
+          "batch": "2027秋招",
+          "notification_type": "assessment_invitation",
+          "tasks": [
+            {
+              "type": "assessment",
+              "round": null,
+              "source_timezone": "Asia/Shanghai",
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": "2026-11-07T18:00:00+08:00",
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "ready",
+        "question_fields": [],
+        "final_status": "ready",
+        "target": "a",
+        "application_patches": {
+          "a": {
+            "stage": "assessment"
+          }
+        },
+        "tasks": [
+          {
+            "key": "new:0",
+            "application": "a",
+            "type": "assessment",
+            "title": "已有招聘事项",
+            "status": "pending",
+            "round": null,
+            "source_timezone": "Asia/Shanghai",
+            "opens_at": null,
+            "starts_at": null,
+            "ends_at": null,
+            "due_at": "2026-11-07T18:00:00+08:00",
+            "starts_on": null,
+            "due_on": null
+          }
+        ]
+      },
+      "confirm_if_ready": true,
+      "duplicate_notification": true,
+      "split": "holdout"
+    },
+    {
+      "id": "H09",
+      "title": "冲突时间：不擅自选最后一处",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例桑陌软件",
+          "position_name": "AI开发工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例桑陌软件2027秋招AI开发工程师：本次笔试定于2026年11月4日10:00；同一安排的页脚又写2026年11月5日10:00，未说明是否改期，请勿自行确定。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": "Asia/Shanghai"
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例桑陌软件",
+          "position_name": "AI开发工程师",
+          "batch": "2027秋招",
+          "notification_type": "written_test_invitation",
+          "tasks": [
+            {
+              "type": "written_test",
+              "round": null,
+              "source_timezone": {
+                "one_of": [
+                  null,
+                  "Asia/Shanghai"
+                ]
+              },
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": null,
+              "starts_on": null,
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "awaiting_user",
+        "question_fields": [
+          "tasks.0.starts_at",
+          "starts_at",
+          "time",
+          "date",
+          "time_conflict",
+          "conflict"
+        ],
+        "final_status": "awaiting_user",
+        "target": null,
+        "application_patches": {},
+        "tasks": []
+      },
+      "confirm_if_ready": false,
+      "split": "holdout"
+    },
+    {
+      "id": "H10",
+      "title": "未知来源时区：不发明具体瞬间",
+      "material_type": "synthetic",
+      "provenance": "AI-authored controlled development material; not a personal recruiting notice",
+      "applications": [
+        {
+          "key": "a",
+          "company_name": "示例见岚科技",
+          "position_name": "AI应用工程师",
+          "batch": "2027秋招",
+          "stage": "submitted",
+          "outcome": "active",
+          "company_aliases": []
+        }
+      ],
+      "tasks": [],
+      "notification": {
+        "text": "示例见岚科技2027秋招AI应用工程师：2026年11月5日14:00参加面试。通知未注明使用哪个地区的时区。",
+        "source": "manual",
+        "sent_at": "2026-10-27T09:00:00+08:00",
+        "timezone_hint": null
+      },
+      "answers": [],
+      "expected": {
+        "extraction": {
+          "company_name": "示例见岚科技",
+          "position_name": "AI应用工程师",
+          "batch": "2027秋招",
+          "notification_type": "interview_invitation",
+          "tasks": [
+            {
+              "type": "interview",
+              "round": null,
+              "source_timezone": null,
+              "opens_at": null,
+              "starts_at": null,
+              "ends_at": null,
+              "due_at": null,
+              "starts_on": {
+                "one_of": [
+                  null,
+                  "2026-11-05"
+                ]
+              },
+              "due_on": null
+            }
+          ]
+        },
+        "first_status": "awaiting_user",
+        "question_fields": [
+          "timezone_hint",
+          "tasks.0.source_timezone",
+          "source_timezone",
+          "timezone",
+          "tasks.0.starts_at"
+        ],
+        "final_status": "awaiting_user",
+        "target": null,
+        "application_patches": {},
+        "tasks": []
+      },
+      "confirm_if_ready": false,
+      "split": "holdout"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-29",
+  "checks_passed": {
+    "release": 20,
+    "reliability": 46,
+    "upgrade": 11,
+    "observation": 31,
+    "automatic": 25
+  },
+  "conditions": "clean archive build and isolated PostgreSQL16/Docker Compose; synthetic data; explicit model/mail fixtures",
+  "candidate_image_id": "sha256:efddb6acc778ee4024d15601f27c6396492b5ab86eeebea472b13443bb1e0198",
+  "real_model_called": false,
+  "real_mail_called": false,
+  "temporary_test_resources_removed": true,
+  "note": "Final documentation and evidence summaries were updated after the runtime checks; production code is unchanged."
+}

@@ -1,0 +1,173 @@
+{
+  "captured_on": "2026-10-27",
+  "source_root": "local learning checkout (machine path omitted)",
+  "source_git_head": "f3b7a3f82688cfe374b3a478d0c01111ce27544b",
+  "source_note": "Snapshot of current local file bytes; local changes may differ from Git HEAD.",
+  "reference_files": [
+    {
+      "source": "api/main.py",
+      "destination": "reference/upstream/api/main.py",
+      "sha256": "21263ad60d909a8a3d3d468e81945cfbf9abd6ac7ff9b24483a9aa51db89a6c0",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "agent/__init__.py",
+      "destination": "reference/upstream/agent/__init__.py",
+      "sha256": "6d134a588c77525c1158f214341de9e4cc4ae4e77bf36c4596aa463fadbf8695",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "agent/context.py",
+      "destination": "reference/upstream/agent/context.py",
+      "sha256": "301b7abe9691bd3ee635ccf4f9473b31cbaefcde78d16ed6af539c233dfaf385",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "agent/customer_success_agent.py",
+      "destination": "reference/upstream/agent/customer_success_agent.py",
+      "sha256": "c9075d8e41c61ea7527babb2f9c52d24f058ec7794634e4047c99a5a641a939d",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "agent/cache.py",
+      "destination": "reference/upstream/agent/cache.py",
+      "sha256": "e81149aaa50d82a1912f6bd8f8af476afb6e43aafe2a15babc8c16979c1d4b9c",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "agent/embeddings.py",
+      "destination": "reference/upstream/agent/embeddings.py",
+      "sha256": "034259cf481aac4fa982a1d8c4349fc06f87b5c4671687f8f57f2906c89981b5",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "database/pool.py",
+      "destination": "reference/upstream/database/pool.py",
+      "sha256": "a1da59cf5fd049ffa78091bf7f7b00b24de9eee79cb5dff5235aeb63eac6ad2a",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "pyproject.toml",
+      "destination": "reference/upstream/pyproject.toml",
+      "sha256": "9d90e41eda9b9d9b7d833d047d492d06eef0e6154a06c92ece19e619cab69e93",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/package.json",
+      "destination": "reference/upstream/web/package.json",
+      "sha256": "9944f59fc065ff4354184cfdfd68599274df2b128cdde6eb97250389d69e2ade",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/package-lock.json",
+      "destination": "reference/upstream/web/package-lock.json",
+      "sha256": "7392e1566a428cf0f1c13a93e01fd9bbc2274a5483cdf5d5c6246e19cd8d10a2",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/next.config.ts",
+      "destination": "reference/upstream/web/next.config.ts",
+      "sha256": "496898063c834c666510bdb5bb472bcf08e01ca8eef297da101ad12680c8fc93",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/tsconfig.json",
+      "destination": "reference/upstream/web/tsconfig.json",
+      "sha256": "a441305cb6716f97dc75977be0712b28d3df2df75f383aed739b35aeed806148",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/eslint.config.mjs",
+      "destination": "reference/upstream/web/eslint.config.mjs",
+      "sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/postcss.config.mjs",
+      "destination": "reference/upstream/web/postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/vitest.config.ts",
+      "destination": "reference/upstream/web/vitest.config.ts",
+      "sha256": "54950a6fb2dba7297c7e0ca50815e87d589e9fd6bedc1d93e784989c6a37f615",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/lib/api.ts",
+      "destination": "reference/upstream/web/src/lib/api.ts",
+      "sha256": "61ec95207313125dc0ca9dd198f1c8b9f9ae4711f300dbd893c674773721a301",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/lib/types.ts",
+      "destination": "reference/upstream/web/src/lib/types.ts",
+      "sha256": "2ba9aa1c17f8475f48b17c6650c1f24238d1c5e9313c3e762470deee60e6b31c",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/components/MarkdownRenderer.tsx",
+      "destination": "reference/upstream/web/src/components/MarkdownRenderer.tsx",
+      "sha256": "8032a9aa84a08a27d728240ff4f4755823228fb2190d8b07900d6029caeafcf3",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/components/StatusIndicator.tsx",
+      "destination": "reference/upstream/web/src/components/StatusIndicator.tsx",
+      "sha256": "ccbb1f25849ec7c272045eb5d6a86a4e98ee956a7fcb0cdf511ce7bafbb31bcd",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/hooks/useJobPolling.ts",
+      "destination": "reference/upstream/web/src/hooks/useJobPolling.ts",
+      "sha256": "dfd7c0fc6767bfd5045d8611eda3fcfd136c6492e23148bfb543a87e007628f7",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/hooks/useHealthCheck.ts",
+      "destination": "reference/upstream/web/src/hooks/useHealthCheck.ts",
+      "sha256": "55bf4d7929d9fc3f527db2fa85880b31e384632bf432da7d1e49c5a54760266b",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "web/src/hooks/useCooldown.ts",
+      "destination": "reference/upstream/web/src/hooks/useCooldown.ts",
+      "sha256": "f72b4be4849878e8f5a3f71efd2ab102a376c6a16b84c4889e436cfca4d38a07",
+      "mode": "verbatim_reference"
+    },
+    {
+      "source": "LICENSE",
+      "destination": "LICENSE",
+      "sha256": "3ac7e1f3ec90e08c25aa84cf6d047b8079f03f4a4ed04f6db8ec62acdc9966ab",
+      "mode": "verbatim_license"
+    }
+  ],
+  "adapted_files": [
+    {
+      "source": "agent/__init__.py",
+      "destination": "core/logging.py",
+      "source_sha256": "6d134a588c77525c1158f214341de9e4cc4ae4e77bf36c4596aa463fadbf8695",
+      "destination_sha256": "2156dd39f42f4219d3ee98fffaa6470c74fd556016a057b3080321ea99410c8b",
+      "change": "Module docstring changed; logging implementation retained."
+    },
+    {
+      "source": "database/pool.py",
+      "destination": "database/pool.py",
+      "source_sha256": "a1da59cf5fd049ffa78091bf7f7b00b24de9eee79cb5dff5235aeb63eac6ad2a",
+      "destination_sha256": "b67d9a84e459c3f1e45b2baf14d0b567e9bf76f188d523ce6f437d0450fc6cb8",
+      "change": "Removed pgvector registration, development pool size 1-5, explicit missing-DSN error; not connected."
+    }
+  ],
+  "excluded": [
+    ".env",
+    ".git",
+    ".venv",
+    "node_modules",
+    "databases",
+    "private notifications",
+    "customer seed data",
+    "original test result claims"
+  ],
+  "reference_snapshot_distribution": "Reference destinations identify a local read-only snapshot, retained outside this public repository."
+}

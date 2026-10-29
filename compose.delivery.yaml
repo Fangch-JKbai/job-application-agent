@@ -1,0 +1,94 @@
+name: job-agent-delivery
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+x-runtime: &runtime
+  build: .
+  image: ${APP_IMAGE:-job-application-agent:local}
+  init: true
+  env_file: .env
+  logging: *logging
+  restart: unless-stopped
+services:
+  postgres:
+    image: ${POSTGRES_IMAGE:-postgres:16}
+    environment:
+      POSTGRES_DB: job_application_agent_dev
+      POSTGRES_USER: job_agent
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure .env first}
+    volumes:
+      - delivery_pgdata:/var/lib/postgresql/data
+    cpus: 2.0
+    mem_limit: 1g
+    logging: *logging
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U job_agent -d job_application_agent_dev"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    stop_grace_period: 30s
+    restart: unless-stopped
+  app:
+    <<: *runtime
+    ports:
+      - "127.0.0.1:${APP_PORT:-8001}:8001"
+    environment:
+      DATABASE_URL: postgresql://job_agent:${POSTGRES_PASSWORD}@postgres:5432/job_application_agent_dev
+      LOCAL_USER_ID: ${LOCAL_USER_ID:-00000000-0000-0000-0000-000000000001}
+      APP_MODE: private
+      MAIL_POLL_SECONDS: ${MAIL_POLL_SECONDS:-43200}
+      MODEL_REQUESTS_PER_HOUR: ${MODEL_REQUESTS_PER_HOUR:-30}
+    cpus: 1.0
+    mem_limit: 512m
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", ".venv/bin/python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health/ready',timeout=2).read()"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    stop_grace_period: 45s
+  worker:
+    <<: *runtime
+    command: [".venv/bin/python", "-m", "services.worker"]
+    environment:
+      DATABASE_URL: postgresql://job_agent:${POSTGRES_PASSWORD}@postgres:5432/job_application_agent_dev
+      MODEL_REQUESTS_PER_HOUR: ${MODEL_REQUESTS_PER_HOUR:-30}
+      RUNTIME_HEALTH_FILE: /tmp/job-agent-worker.json
+    cpus: 1.0
+    mem_limit: 512m
+    depends_on:
+      app:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", ".venv/bin/python", "scripts/check_runtime_health.py", "worker"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    stop_grace_period: 150s
+  scheduler:
+    <<: *runtime
+    command: [".venv/bin/python", "-m", "services.mail_scheduler"]
+    environment:
+      DATABASE_URL: postgresql://job_agent:${POSTGRES_PASSWORD}@postgres:5432/job_application_agent_dev
+      MAIL_POLL_SECONDS: ${MAIL_POLL_SECONDS:-43200}
+      RUNTIME_HEALTH_FILE: /tmp/job-agent-scheduler.json
+    cpus: 0.25
+    mem_limit: 256m
+    depends_on:
+      app:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", ".venv/bin/python", "scripts/check_runtime_health.py", "scheduler"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    stop_grace_period: 180s
+volumes:
+  delivery_pgdata:

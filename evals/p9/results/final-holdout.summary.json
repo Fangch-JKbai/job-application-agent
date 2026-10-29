@@ -1,0 +1,826 @@
+{
+  "run_id": "final-holdout",
+  "split": "holdout",
+  "started_at": "2026-10-28T12:25:00.705869+08:00",
+  "finished_at": "2026-10-28T12:25:59.076236+08:00",
+  "state": "completed",
+  "material_type": "synthetic",
+  "real_model_called": true,
+  "requested_provider": "deepseek",
+  "requested_model": "deepseek-flash",
+  "dataset_lock": {
+    "version": "p9-v1",
+    "frozen_on": "2026-10-28",
+    "author": "same AI assistant as implementation; not external independent annotation",
+    "heldout_meaning": "specific texts and expected outcomes frozen before development live runs; no holdout-driven tuning after final run",
+    "real_redacted_cases": 0,
+    "files": {
+      "development.json": "a6f77fffffd87a7026bc35c9ffebbdf727ec1253294fc46c509e5a8821e3d53b",
+      "holdout.json": "942885a17e1f99b6dbb3f18de3f6d0eb512884bcdcf4f336fd55fbb43a80aa99",
+      "pricing.json": "a545dae10f1f2fc588351c93ac96bf07bac9617f62621b9b09e41ea7b48a1ce8"
+    }
+  },
+  "source_hashes": {
+    "agent/__init__.py": "6a930f15f404a4cdc5036d19389e8367ba45950898f3171bb30c486b57e0f2cb",
+    "agent/notification_extractor.py": "807cfd1163f1fdf8399a3da20a8f1488c9c97d12b887e47904765800be6382ec",
+    "agent/session_agent.py": "1059955a509c63c62df95274ae1da052071db58ec2a6c89f266c711d562f1bbe",
+    "agent/session_tools.py": "8b4a84687620df72632a99c8734a1f05c9c7a113c2103c7e70a8d1835c5cafd8",
+    "api/__init__.py": "d18f915f78b82572300bd6befe19565420a73b8d6a5922fb7b4ba77ecc6889a0",
+    "api/confirmations.py": "3bf25da2922a17de1db7c2030fc84a9cee2ba642b99afee8addb099fa72a8905",
+    "api/main.py": "4dce6b7a0875be130ba416efcaadbe34b25a24ea75f6063ae7b2ad1db1df8c33",
+    "api/notifications.py": "00e2fcf6fe6cd0d9a3cdc83ce0e8c535e313561458a9ba3da81d7d7ec4c8519a",
+    "api/processing.py": "c09155c45612a16351bff99aeda3ac92ecfe331b331bc308c25bb80e81ed1b29",
+    "api/routes.py": "20c89e804fd9388448998756821c710a52bb66c8de554c3ef13c4862bc7955c7",
+    "api/sessions.py": "bfba3159c6567986a38f18a32cfa6b03347a2d3b77d799c0ba00ae2711f930f6",
+    "api/workbench.py": "cb090a7d520f1dda66f0f9811587b30abcfd906f591119bf11e963cca866d215",
+    "core/__init__.py": "aa5ff4a67912e1bc260a459a2c9f7efc039d4bfb7f57542e57379f0741c234d3",
+    "core/identity.py": "4f01803af291105c4b1ab2efe84ffe701b58d5654dd2039899de0aabde970a3e",
+    "core/logging.py": "1013f0e8ce1de5a4838013e1968416033ed055ae9b2dd0cbc62400183f15a00e",
+    "database/migrations/0001_core.sql": "58f489909ae2914fa28cea331771bd7525578add4766412e5ea0561d57ad7678",
+    "database/migrations/0002_request_fingerprint.sql": "9b6ebfe0ec6efdc58d033a13b899a28acfaf44a2f65d56ac32c7d7e387ba47a6",
+    "database/migrations/0003_notifications.sql": "066264500ef90be527c4437a552eaf739e5841ccb6836f89eb3c92d02d06caa8",
+    "database/migrations/0004_agent_sessions.sql": "386b62e8f96465f59cded985a8b21e4d2593c8d1ade99ffda4082d35718ce5cb",
+    "database/migrations/0005_proposal_execution.sql": "fd039ac01e98a4bf03033f420962a4cb1e1b64f606e0dfbd4ac153176a69d4b8",
+    "database/migrations/0006_processing_recovery.sql": "efc8542946949cdb35098796808b99dc476aa3a9601899fb58add84239848eae",
+    "evaluation/__init__.py": "85d294a38f0d8fbe2d8d9561ac180bafdff5fcf11a10ed1ba901521ab2fca1cd",
+    "evaluation/grading.py": "8ca27fb731e7aad0f99a1d565403b84565b4459441898c2fb5aa412e3377468e",
+    "evaluation/reporting.py": "f7b4eb7f8b149d9996f6c4add73349960811578ecc3c563e5d4d8e5d38d5d731",
+    "evaluation/runner.py": "3501b0c64369db74fc6148b2661fe66cbd2af36ad7af844104fe27540bdef473",
+    "pyproject.toml": "fcde21ec9dcac05188bffc36dcd755bc09ce286decdb623faa57a9c034d48f20",
+    "schemas/__init__.py": "8d661bc8f32d5b64934e60b9fc2b9c70489c8d39f240bd5f0e53f6e49d61b8fb",
+    "schemas/confirmations.py": "8f9c4a084d7b4cf52b17bf44fa02872cf8743f2419ac4bfcbac0c448cd62cf53",
+    "schemas/notifications.py": "571901ff5c156d75c76edb50e389b94117656ecc7d596191f29727d2d46e6b11",
+    "schemas/processing.py": "a33dd3092aae7d5877a676fc43bbced7be7cc19f9d9fcffdc6d0d29020d1fcab",
+    "schemas/recruitment.py": "f88685029325909e4074bed99abe75eab5536b99c1f8c32ade1a8b854c0b245b",
+    "schemas/sessions.py": "983bd889f1898c1e8d10eda9d417fe2c1fb7f8589d69c2e709e060d83957c242",
+    "schemas/workbench.py": "3fbf583c10a600857f2558ccc92ec197e456a80d60f44cde336cef506ce35446",
+    "scripts/evaluate_p9.py": "8216d254636ad453b727a6f2a0ddbbf82a72fac35486bcae1e1f4a5107f467f7",
+    "services/__init__.py": "dbc5ce2cf2b99d990dbd73175d749e47deb7aca944776550a8e2ee939108baf7",
+    "services/confirmations.py": "1c65534eaa80b9ab3d378c03098fca82e2b6530fcefc5ac7f23f6299e6988443",
+    "services/errors.py": "b01bab59b6284641d7bba9174e8456863d0cdd7d4dbe93d12103c3b167f7923f",
+    "services/notification_validation.py": "aec9a451513eca5655869f984dd1d2c4f4f44120e2a1ab50bfb52efcddc40741",
+    "services/notifications.py": "697ebb74c4ea7ed0e4714cb71a77aa817139eab2110fde57ffce91a0ee1477ef",
+    "services/processing.py": "581795d5927845683157e1a1e8d7c5e7e8f0473c76d1adf3dc122b80042d501a",
+    "services/processing_state.py": "a7d06ea9174323646bb6c8f53321f7d7465b71228619dfc2cd19f052d8449c98",
+    "services/proposal_state.py": "62407e1a7f3039627a61c8ed8d37d691bae09765b7ed393a0624e4f791394338",
+    "services/recruitment.py": "c1f56356d060b4cea9df228fd67ad103de021bc8989fca3b7da447353f515db2",
+    "services/sessions.py": "4b742e31253f869bb691f5c01c18382400a932684f12367e1afa0c0a24ec72d6",
+    "uv.lock": "ec7474c7ea8d470328fa33536e92e980aa309ad092952076819140cc2ce7ca74"
+  },
+  "package_versions": {
+    "openai": "2.21.0",
+    "asyncpg": "0.31.0",
+    "fastapi": "0.131.0",
+    "pydantic": "2.14.1"
+  },
+  "summary": {
+    "case_count": 10,
+    "passed": 5,
+    "metrics": {
+      "application_match": {
+        "passed": 4,
+        "evaluated": 8,
+        "rate": 0.5
+      },
+      "confirmed_and_replayed_once": {
+        "passed": 4,
+        "evaluated": 8,
+        "rate": 0.5
+      },
+      "database_final_state": {
+        "passed": 6,
+        "evaluated": 10,
+        "rate": 0.6
+      },
+      "extraction_fields": {
+        "passed": 7,
+        "evaluated": 10,
+        "rate": 0.7
+      },
+      "final_session": {
+        "passed": 6,
+        "evaluated": 10,
+        "rate": 0.6
+      },
+      "first_turn_and_questions": {
+        "passed": 6,
+        "evaluated": 10,
+        "rate": 0.6
+      },
+      "no_preconfirmation_business_writes": {
+        "passed": 10,
+        "evaluated": 10,
+        "rate": 1.0
+      },
+      "protocol_completed": {
+        "passed": 6,
+        "evaluated": 10,
+        "rate": 0.6
+      },
+      "request_replay_no_extra_work": {
+        "passed": 10,
+        "evaluated": 10,
+        "rate": 1.0
+      },
+      "semantic_duplicate_no_extra_business_writes": {
+        "passed": 1,
+        "evaluated": 1,
+        "rate": 1.0
+      },
+      "unrelated_records_preserved": {
+        "passed": 10,
+        "evaluated": 10,
+        "rate": 1.0
+      }
+    },
+    "latency_ms": {
+      "definition": "whole scripted workflow, including setup readback and synthetic user steps",
+      "p50_nearest_rank": 5984,
+      "p95_nearest_rank": 9988
+    },
+    "failed_cases": [
+      "H02",
+      "H04",
+      "H05",
+      "H06",
+      "H07"
+    ]
+  },
+  "cost": {
+    "tool_calls": 43,
+    "tool_errors": 2,
+    "model_calls": 47,
+    "calls_with_usage": 47,
+    "calls_priced": 47,
+    "tokens": {
+      "prompt_tokens": 189519,
+      "completion_tokens": 5448,
+      "total_tokens": 194967
+    },
+    "observed_cost_usd_range": [
+      "0.006464394",
+      "0.012928788"
+    ],
+    "complete": true,
+    "not_account_bill": true
+  },
+  "temporary_database_removed": true,
+  "cases": [
+    {
+      "case_id": "H01",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 7424,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 7,
+        "calls_with_usage": 7,
+        "calls_priced": 7,
+        "tokens": {
+          "prompt_tokens": 30416,
+          "completion_tokens": 665,
+          "total_tokens": 31081
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000821880",
+          "0.001643760"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H01/result.json"
+    },
+    {
+      "case_id": "H02",
+      "grade": {
+        "metrics": {
+          "extraction_fields": false,
+          "first_turn_and_questions": false,
+          "final_session": false,
+          "application_match": false,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": false,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": false,
+          "protocol_completed": false
+        },
+        "all_passed": false,
+        "differences": {
+          "fields": [
+            {
+              "field": "company_name",
+              "expected": "示例柳汀软件",
+              "actual": "<missing>"
+            },
+            {
+              "field": "position_name",
+              "expected": "AI应用工程师",
+              "actual": "<missing>"
+            },
+            {
+              "field": "batch",
+              "expected": "2027秋招",
+              "actual": "<missing>"
+            },
+            {
+              "field": "notification_type",
+              "expected": "other",
+              "actual": "<missing>"
+            },
+            {
+              "field": "tasks",
+              "expected": [
+                {
+                  "type": "material_submission",
+                  "round": null,
+                  "source_timezone": {
+                    "one_of": [
+                      null,
+                      "Asia/Shanghai"
+                    ]
+                  },
+                  "opens_at": null,
+                  "starts_at": null,
+                  "ends_at": null,
+                  "due_at": null,
+                  "starts_on": null,
+                  "due_on": "2026-11-06"
+                }
+              ],
+              "actual": "<missing>"
+            }
+          ],
+          "database": [
+            {
+              "field": "tasks",
+              "expected": [
+                {
+                  "key": "new:0",
+                  "application": "a",
+                  "type": "material_submission",
+                  "status": "pending",
+                  "round": null,
+                  "opens_at": null,
+                  "starts_at": null,
+                  "ends_at": null,
+                  "due_at": null,
+                  "starts_on": null,
+                  "due_on": "2026-11-06",
+                  "source_timezone": {
+                    "one_of": [
+                      null,
+                      "Asia/Shanghai"
+                    ]
+                  },
+                  "time_note": null,
+                  "notes": null
+                }
+              ],
+              "actual": []
+            }
+          ]
+        }
+      },
+      "protocol_error": {
+        "type": "ValueError",
+        "message": "Extraction returned HTTP 422"
+      },
+      "elapsed_ms": 2156,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 1,
+        "calls_with_usage": 1,
+        "calls_priced": 1,
+        "tokens": {
+          "prompt_tokens": 2151,
+          "completion_tokens": 247,
+          "total_tokens": 2398
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000207426",
+          "0.000414852"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H02/result.json"
+    },
+    {
+      "case_id": "H03",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 8416,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 8,
+        "calls_with_usage": 8,
+        "calls_priced": 8,
+        "tokens": {
+          "prompt_tokens": 35481,
+          "completion_tokens": 659,
+          "total_tokens": 36140
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000938286",
+          "0.001876572"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H03/result.json"
+    },
+    {
+      "case_id": "H04",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": false,
+          "final_session": false,
+          "application_match": false,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": false,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": false,
+          "protocol_completed": false
+        },
+        "all_passed": false,
+        "differences": {
+          "fields": [],
+          "database": [
+            {
+              "field": "applications.new:0.company_name",
+              "expected": "示例朔原信息",
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.company_aliases",
+              "expected": [],
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.position_name",
+              "expected": "Agent全栈工程师",
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.batch",
+              "expected": "2027秋招",
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.stage",
+              "expected": "assessment",
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.outcome",
+              "expected": "active",
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.applied_at",
+              "expected": null,
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.applied_on",
+              "expected": null,
+              "actual": "<missing>"
+            },
+            {
+              "field": "applications.new:0.notes",
+              "expected": null,
+              "actual": "<missing>"
+            },
+            {
+              "field": "tasks",
+              "expected": [
+                {
+                  "key": "new:0",
+                  "application": "new:0",
+                  "type": "assessment",
+                  "status": "pending",
+                  "round": null,
+                  "opens_at": null,
+                  "starts_at": null,
+                  "ends_at": null,
+                  "due_at": "2026-11-06T16:30:00+08:00",
+                  "starts_on": null,
+                  "due_on": null,
+                  "source_timezone": "Asia/Shanghai",
+                  "time_note": null,
+                  "notes": null
+                }
+              ],
+              "actual": []
+            }
+          ]
+        }
+      },
+      "protocol_error": {
+        "type": "ValueError",
+        "message": "No pending question matches predeclared scripted answer fields"
+      },
+      "elapsed_ms": 3800,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 3,
+        "calls_with_usage": 3,
+        "calls_priced": 3,
+        "tokens": {
+          "prompt_tokens": 10752,
+          "completion_tokens": 390,
+          "total_tokens": 11142
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000473232",
+          "0.000946464"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H04/result.json"
+    },
+    {
+      "case_id": "H05",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": false,
+          "final_session": false,
+          "application_match": false,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": false,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": false,
+          "protocol_completed": false
+        },
+        "all_passed": false,
+        "differences": {
+          "fields": [],
+          "database": [
+            {
+              "field": "applications.a.outcome",
+              "expected": "rejected",
+              "actual": "active"
+            }
+          ]
+        }
+      },
+      "protocol_error": {
+        "type": "ValueError",
+        "message": "Initial agent turn returned HTTP 422"
+      },
+      "elapsed_ms": 5984,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 5,
+        "calls_with_usage": 5,
+        "calls_priced": 5,
+        "tokens": {
+          "prompt_tokens": 19696,
+          "completion_tokens": 445,
+          "total_tokens": 20141
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000568344",
+          "0.001136688"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H05/result.json"
+    },
+    {
+      "case_id": "H06",
+      "grade": {
+        "metrics": {
+          "extraction_fields": false,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "protocol_completed": true
+        },
+        "all_passed": false,
+        "differences": {
+          "fields": [
+            {
+              "field": "notification_type",
+              "expected": "cancellation",
+              "actual": "schedule_change"
+            }
+          ],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 6108,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 5,
+        "calls_with_usage": 5,
+        "calls_priced": 5,
+        "tokens": {
+          "prompt_tokens": 20461,
+          "completion_tokens": 588,
+          "total_tokens": 21049
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000712446",
+          "0.001424892"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H06/result.json"
+    },
+    {
+      "case_id": "H07",
+      "grade": {
+        "metrics": {
+          "extraction_fields": false,
+          "first_turn_and_questions": false,
+          "final_session": false,
+          "application_match": false,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": false,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": false,
+          "protocol_completed": false
+        },
+        "all_passed": false,
+        "differences": {
+          "fields": [
+            {
+              "field": "company_name",
+              "expected": "示例泊岸系统",
+              "actual": "<missing>"
+            },
+            {
+              "field": "position_name",
+              "expected": "AI后端工程师",
+              "actual": "<missing>"
+            },
+            {
+              "field": "batch",
+              "expected": "2027秋招",
+              "actual": "<missing>"
+            },
+            {
+              "field": "notification_type",
+              "expected": "assessment_invitation",
+              "actual": "<missing>"
+            },
+            {
+              "field": "tasks",
+              "expected": [
+                {
+                  "type": "assessment",
+                  "round": null,
+                  "source_timezone": "Asia/Shanghai",
+                  "opens_at": null,
+                  "starts_at": null,
+                  "ends_at": null,
+                  "due_at": "2026-10-16T17:00:00+08:00",
+                  "starts_on": null,
+                  "due_on": null
+                }
+              ],
+              "actual": "<missing>"
+            }
+          ],
+          "database": [
+            {
+              "field": "applications.a.stage",
+              "expected": "assessment",
+              "actual": "submitted"
+            },
+            {
+              "field": "tasks",
+              "expected": [
+                {
+                  "key": "new:0",
+                  "application": "a",
+                  "type": "assessment",
+                  "status": "pending",
+                  "round": null,
+                  "opens_at": null,
+                  "starts_at": null,
+                  "ends_at": null,
+                  "due_at": "2026-10-16T17:00:00+08:00",
+                  "starts_on": null,
+                  "due_on": null,
+                  "source_timezone": "Asia/Shanghai",
+                  "time_note": null,
+                  "notes": null
+                }
+              ],
+              "actual": []
+            }
+          ]
+        }
+      },
+      "protocol_error": {
+        "type": "ValueError",
+        "message": "Extraction returned HTTP 422"
+      },
+      "elapsed_ms": 1813,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 1,
+        "calls_with_usage": 1,
+        "calls_priced": 1,
+        "tokens": {
+          "prompt_tokens": 2139,
+          "completion_tokens": 218,
+          "total_tokens": 2357
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000188226",
+          "0.000376452"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H07/result.json"
+    },
+    {
+      "case_id": "H08",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "application_match": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "confirmed_and_replayed_once": true,
+          "semantic_duplicate_no_extra_business_writes": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 9988,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 9,
+        "calls_with_usage": 9,
+        "calls_priced": 9,
+        "tokens": {
+          "prompt_tokens": 35950,
+          "completion_tokens": 1088,
+          "total_tokens": 37038
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.001284852",
+          "0.002569704"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H08/result.json"
+    },
+    {
+      "case_id": "H09",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 6457,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 6,
+        "calls_with_usage": 6,
+        "calls_priced": 6,
+        "tokens": {
+          "prompt_tokens": 26012,
+          "completion_tokens": 736,
+          "total_tokens": 26748
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000824808",
+          "0.001649616"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H09/result.json"
+    },
+    {
+      "case_id": "H10",
+      "grade": {
+        "metrics": {
+          "extraction_fields": true,
+          "first_turn_and_questions": true,
+          "final_session": true,
+          "no_preconfirmation_business_writes": true,
+          "database_final_state": true,
+          "unrelated_records_preserved": true,
+          "request_replay_no_extra_work": true,
+          "protocol_completed": true
+        },
+        "all_passed": true,
+        "differences": {
+          "fields": [],
+          "database": []
+        }
+      },
+      "protocol_error": null,
+      "elapsed_ms": 3692,
+      "scripted_human_review": false,
+      "cost": {
+        "calls": 2,
+        "calls_with_usage": 2,
+        "calls_priced": 2,
+        "tokens": {
+          "prompt_tokens": 6461,
+          "completion_tokens": 412,
+          "total_tokens": 6873
+        },
+        "usage_complete": true,
+        "estimated_observed_cost_usd_range": [
+          "0.000444894",
+          "0.000889788"
+        ],
+        "cost_complete": true,
+        "note": "range for observed tokens across peak/off-peak; excludes unreturned usage and is not an account bill"
+      },
+      "evidence": ".work/p9/final-holdout/H10/result.json"
+    }
+  ]
+}

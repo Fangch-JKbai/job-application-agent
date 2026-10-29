@@ -1,0 +1,12 @@
+{
+  "version": "p9-v1",
+  "frozen_on": "2026-10-28",
+  "author": "same AI assistant as implementation; not external independent annotation",
+  "heldout_meaning": "specific texts and expected outcomes frozen before development live runs; no holdout-driven tuning after final run",
+  "real_redacted_cases": 0,
+  "files": {
+    "development.json": "a6f77fffffd87a7026bc35c9ffebbdf727ec1253294fc46c509e5a8821e3d53b",
+    "holdout.json": "942885a17e1f99b6dbb3f18de3f6d0eb512884bcdcf4f336fd55fbb43a80aa99",
+    "pricing.json": "a545dae10f1f2fc588351c93ac96bf07bac9617f62621b9b09e41ea7b48a1ce8"
+  }
+}
