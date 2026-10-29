@@ -4,7 +4,7 @@ A personal recruiting inbox that turns notifications into application records an
 
 把招聘邮件和粘贴的通知转成申请进度与待办。支持 QQ / 网易邮箱、AI 字段提取、自动匹配保存，以及事后编辑和撤销。
 
-这是一个个人空间的 AI 应用与工程实践项目，包含 React 工作台、FastAPI 后端、PostgreSQL 持久任务队列、独立 worker 和邮箱调度器。项目由维护者与 AI 协作逐步实现，选择性复用的上游基础代码及许可证见 [NOTICE.md](NOTICE.md)。
+这是一个个人空间的 AI 应用与工程实践项目，包含 React 工作台、FastAPI 后端、PostgreSQL 持久任务队列、独立 worker 和邮箱调度器。
 
 ## 能做什么
 
